@@ -77,7 +77,7 @@
         <div class="section">
             <h1><span class="prompt">user@ehrlibs:~$</span> <span class="command">ls -l projects/</span></h1>
             <p>
-                drwxr-xr-x 2 user user 4096 Jan 22 2025 <a href="https://github.com/ErikSundvall/ehrtslib" target="_blank">ehrtslib</a>
+                drwxr-xr-x 2 user user 4096 <span id="dirdate"></span> <a href="https://github.com/ErikSundvall/ehrtslib" target="_blank">ehrtslib</a>
             </p>
         </div>
 
@@ -105,7 +105,17 @@
     </div>
 
     <script>
-        document.getElementById('date').textContent = new Date().toString();
+        const now = new Date();
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const dateStr = days[now.getDay()] + ' ' + months[now.getMonth()] + ' ' + 
+                       now.getDate() + ' ' + now.getFullYear() + ' ' + 
+                       now.toTimeString().split(' ')[0] + ' ' + 
+                       now.toTimeString().split(' ')[1];
+        document.getElementById('date').textContent = dateStr;
+        
+        const dirDateStr = months[now.getMonth()] + ' ' + now.getDate() + ' ' + now.getFullYear();
+        document.getElementById('dirdate').textContent = dirDateStr;
     </script>
 </body>
 </html>
