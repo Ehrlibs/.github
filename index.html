@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ehrlibs - Electronic Health Record Libraries</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0d0d0d;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .terminal {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .prompt {
+            color: #00ff00;
+        }
+        .command {
+            color: #ffffff;
+        }
+        h1 {
+            color: #00ff00;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+        a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        pre {
+            color: #00ff00;
+            margin: 10px 0;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .blink {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <pre>
+ _____  _          _  _  _         
+| ____|| |__  _ __| |(_)| |__  ___ 
+|  _|  | '_ \| '__| || || '_ \/ __|
+| |___ | | | | |  | || || |_) \__ \
+|_____||_| |_|_|  |_||_||_.__/|___/
+        </pre>
+        
+        <div class="section">
+            <p><span class="prompt">user@ehrlibs:~$</span> <span class="command">cat about.txt</span></p>
+            <p>
+                Ehrlibs is dedicated to hosting libraries for making Electronic Health Record (EHR) software,<br>
+                implemented using various technologies & programming languages.<br>
+                Targeting the openEHR standard (to begin with).
+            </p>
+        </div>
+
+        <div class="section">
+            <h1><span class="prompt">user@ehrlibs:~$</span> <span class="command">ls -l projects/</span></h1>
+            <p>
+                drwxr-xr-x 2 user user 4096 Jan 22 2025 <a href="https://github.com/ErikSundvall/ehrtslib" target="_blank">ehrtslib</a>
+            </p>
+        </div>
+
+        <div class="section">
+            <p><span class="prompt">user@ehrlibs:~$</span> <span class="command">cat projects/ehrtslib/README.md</span></p>
+            <p>
+                <strong>ehrtslib</strong> - A TypeScript library for working with openEHR data structures.<br>
+                Provides tools and utilities for building EHR applications that comply with the openEHR standard.<br>
+                <br>
+                Repository: <a href="https://github.com/ErikSundvall/ehrtslib" target="_blank">github.com/ErikSundvall/ehrtslib</a>
+            </p>
+        </div>
+
+        <div class="section">
+            <p><span class="prompt">user@ehrlibs:~$</span> <span class="command">echo "Learn more about openEHR"</span></p>
+            <p>Visit <a href="https://www.openehr.org/" target="_blank">openehr.org</a> for more information about the openEHR standard.</p>
+        </div>
+
+        <div class="section">
+            <p><span class="prompt">user@ehrlibs:~$</span> <span class="command">date</span></p>
+            <p id="date"></p>
+        </div>
+
+        <p><span class="prompt">user@ehrlibs:~$</span> <span class="blink">_</span></p>
+    </div>
+
+    <script>
+        document.getElementById('date').textContent = new Date().toString();
+    </script>
+</body>
+</html>
