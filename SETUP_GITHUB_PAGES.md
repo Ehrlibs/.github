@@ -1,6 +1,8 @@
 # GitHub Pages Setup Instructions
 
-This repository now includes a GitHub Actions workflow to automatically deploy the `index.html` file to GitHub Pages at https://ehrlibs.github.io/
+This repository now includes a GitHub Actions workflow to automatically deploy the `index.html` file to GitHub Pages at https://ehrlibs.github.io/.github/
+
+**Note**: To publish at the root URL (https://ehrlibs.github.io/), the repository would need to be renamed to `ehrlibs.github.io`. See `FIX_URL_INSTRUCTIONS.md` for details.
 
 ## What Was Added
 
@@ -27,7 +29,7 @@ After enabling GitHub Pages in the settings:
    - Go to the "Actions" tab
    - Select "Deploy to GitHub Pages" workflow
    - Click "Run workflow"
-3. Once the workflow completes successfully, the site will be available at https://ehrlibs.github.io/
+3. Once the workflow completes successfully, the site will be available at https://ehrlibs.github.io/.github/
 
 ## Workflow Details
 
